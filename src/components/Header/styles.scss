@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 1em;
+    width: 100%;
+    background-color: $background-grey;
+    color: $black;
+    display: flex;
+    justify-content: flex-start;
+}

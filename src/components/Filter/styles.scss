@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+
+.filter-btn{
+    height: 35px;
+    width: 100px;
+    border: none;
+    background-color: $secondary-green;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 10px 15px;
+    cursor: pointer;
+    &.selected{
+        background-color: $primary-green;
+        color: $white;
+    }
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+        height: 20px;
+        width: 40px;
+        font-size: 0.5em;
+        margin: 5px 5px;
+    }
+}

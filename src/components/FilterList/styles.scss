@@ -1,0 +1,24 @@
+@import '../../styles/main.scss';
+.filter-list {
+    h3{
+        font-weight: 600;
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+        margin: 0 10%;
+    }
+    ul{
+        padding-inline-start: 30px;
+
+    }
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+        h3{
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        ul{
+            padding-inline-start: 5px;
+
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../styles/main.scss';
+.card {
+    margin:5px;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px;
+    h3 {
+        color: $primary-green;
+    }
+    &__image {
+        background-color: $background-grey;
+        display: flex;
+        justify-content: center;
+        img{
+            height: 40%;
+            width: 80%;
+        }
+    }
+
+    &__section{
+        margin: 10px 0;
+    }
+
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+        min-height: 450px;
+    }
+
+    @media screen and (min-width: $desktop-min) {
+        min-height: 485px;
+    }
+}

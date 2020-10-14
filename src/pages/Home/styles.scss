@@ -1,0 +1,49 @@
+@import '../../styles/main.scss';
+.homepage {
+    margin-top: 10vh;
+    display: flex;
+    &__filter {
+        flex: 1;
+        &__content{
+            background-color: $white;
+            border-radius: 5px;
+            margin: 0 10px;
+            padding: 10px;
+            h2{
+                margin: 5px 5%;
+            }
+        }
+    }
+
+    &__grid {
+        flex: 1;
+        display: flex;
+        flex-grow: 4;
+        flex-wrap: wrap;
+        &__item{
+            width: 24%;
+        }
+    }
+    @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+
+        &__grid{
+            &__item{
+                width: 50%;
+            }
+        }
+    }
+    @media screen and (max-width: $mobile-max) {
+        margin-top: 20vh;
+        flex-wrap: wrap;
+        &__filter{
+            flex: 0 0 100%;
+        }
+
+        &__grid{
+            &__item{
+                width: 100%;
+            }
+        }
+    }
+    
+}
