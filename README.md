@@ -12,5 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ## Deployment in Staging Environment
 https://spacexapplication12.herokuapp.com/
 
+## Deployment in production environment
+https://spaceapplication12prod.herokuapp.com/
+
 ## Lighthouse Scores
-![perf-screenshot.png](perf-screenshot.png)
+![perf-screenshot.png](https://github.com/suvechhya/spaceXSearchApplication/blob/master/perf-screenshot)
