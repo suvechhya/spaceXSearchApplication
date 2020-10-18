@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { string, func, instanceOf, Array } from 'prop-types';
 import Filter from '../Filter';
 import './styles.scss';
 
@@ -15,11 +16,11 @@ const FilterList = ({ title, filterList, filterChangeHandler, name }) => {
         let tempFilters = [...allFilters];
         const returnFilter = {};
         const selectedIndex = tempFilters.findIndex((i) => i.value === selectedValue);
-        if(tempFilters[selectedIndex].isSelected) {
+        if (tempFilters[selectedIndex].isSelected) {
             tempFilters[selectedIndex].isSelected = 'false';
             returnFilter[name] = null;
         } else {
-            tempFilters = tempFilters.map((filter) => { return {...filter, isSelected: false};});
+            tempFilters = tempFilters.map((filter) => { return { ...filter, isSelected: false }; });
             tempFilters[selectedIndex].isSelected = 'true';
             returnFilter[name] = selectedValue;
         }
@@ -37,6 +38,13 @@ const FilterList = ({ title, filterList, filterChangeHandler, name }) => {
             </ul>
         </div>
     );
+}
+
+FilterList.props = {
+    title: string.isRequired,
+    name: string.isRequired,
+    filterChangeHandler: func.isRequired,
+    filterList: instanceOf(Array).isRequired,
 }
 
 export default FilterList;

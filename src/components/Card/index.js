@@ -1,4 +1,5 @@
 import React from 'react';
+import { shape } from 'prop-types';
 import './styles.scss';
 
 const Card = ({ item: {mission_id,
@@ -10,7 +11,7 @@ const Card = ({ item: {mission_id,
   return (
     <div className="card">
         <div className="card__image">
-            <img src={mission_patch} />
+            <img src={mission_patch} alt={mission_name} />
         </div>
         <h3 className="card__name">{mission_name}</h3>
         <div className="card__section card__mission-id">
@@ -35,6 +36,10 @@ const Card = ({ item: {mission_id,
         </div>
     </div>
   );
+}
+
+Card.props = {
+    item: shape({}).isRequired
 }
 
 export default Card;

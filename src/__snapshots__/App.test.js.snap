@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render correctly with given props 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__image"
+  >
+    <img
+      src="http://abc.com"
+    />
+  </div>
+  <h3
+    className="card__name"
+  >
+    Test Mission
+  </h3>
+  <div
+    className="card__section card__mission-id"
+  >
+    <strong>
+      Mission Ids:
+    </strong>
+    <ul />
+  </div>
+  <div
+    className="card__section card__launch-year"
+  >
+    <strong>
+      Launch Year: 
+    </strong>
+    <span>
+      2008
+    </span>
+  </div>
+  <div
+    className="card__section card__successful-launch"
+  >
+    <strong>
+      Successful Launch: 
+    </strong>
+    <span>
+      <Component />
+    </span>
+  </div>
+  <div
+    className="card__section card__launch-landing"
+  >
+    <strong>
+      Successful Landing: 
+    </strong>
+    <span>
+      <Component />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Filter should be possible to activate button with Spacebar 1`] = `
+<Filter
+  clickHandler={[Function]}
+  isSelected={true}
+  text="2007"
+  value="2007"
+>
+  <button
+    className="filter-btn selected"
+    onClick={[Function]}
+  >
+    2007
+  </button>
+</Filter>
+`;
+
+exports[`Filter should render correctly with given props 1`] = `
+<button
+  className="filter-btn selected"
+  onClick={[Function]}
+>
+  2007
+</button>
+`;
+
+exports[`Footer should render correctly with no props 1`] = `
+<footer
+  className="footer"
+>
+  <span
+    className="footer__text"
+  >
+    <strong>
+      Developed By : 
+    </strong>
+    Suvechhya Banerjee
+  </span>
+</footer>
+`;
+
+exports[`Header should render correctly with no props 1`] = `
+<header
+  className="header"
+>
+  <h1>
+    SpaceX Launch Programs
+  </h1>
+</header>
+`;
+
+exports[`Loader should render correctly with no props 1`] = `
+<div
+  className="loader"
+>
+  <div
+    className="loader__content"
+  />
+</div>
+`;

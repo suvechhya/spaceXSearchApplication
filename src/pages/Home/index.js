@@ -17,14 +17,14 @@ const Home = () => {
         try {
             const response = await searchSpaceShuttles(params);
             if (response) {
-                const data = response.data.map(({mission_name, launch_year, launch_success, launch_landing = false, links: { mission_patch } = {}, mission_id=[]}) => {
+                const data = response.data.map(({mission_name, launch_year, launch_success, launch_landing = false, links: { mission_patch_small } = {}, mission_id=[]}) => {
                     return {
                         mission_id,
                         mission_name,
                         launch_landing: launch_landing.toString(),
                         launch_success: launch_success.toString(),
                         launch_year,
-                        mission_patch,
+                        mission_patch: mission_patch_small,
                     }
                 })
                 setDataList([...data]);
