@@ -13,22 +13,29 @@ const app = express();
 // ...
 
 app.get('/', (req, res) => {
-    const app = ReactDOMServer.renderToString(<App />);
-    const indexFile = path.resolve('./build/index.html');
-    fs.readFile(indexFile, 'utf8', (err, data) => {
-      if (err) {
-        console.error('Something went wrong:', err);
-        return res.status(500).send('Oops, better luck next time!');
-      }
-  
-      return res.send(
-        data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-      );
-    });
+  const app = ReactDOMServer.renderToString(<App />);
+  const indexFile = path.resolve('./build/index.html');
+  fs.readFile(indexFile, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Something went wrong:', err);
+      return res.status(500).send('Oops, better luck next time!');
+    }
+
+    return res.send(
+      data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
+    );
   });
-  
-  app.use(express.static('./build'));
-  
-  app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`);
-  });
+});
+
+app.use(express.static('./build'));
+
+const publicPath = path.join(__dirname, '..', 'public');
+app.use(express.static(publicPath));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+});
